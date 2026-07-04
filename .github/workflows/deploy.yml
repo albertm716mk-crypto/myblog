@@ -6,6 +6,7 @@ on:
       - main
   workflow_dispatch:
 
+# Explicitly set permissions for deploying to GitHub Pages
 permissions:
   contents: read
   pages: write
