@@ -45,6 +45,11 @@ def generate_site():
     # 確保輸出資料夾存在
     os.makedirs('public', exist_ok=True)
     
+    # 複製 assets 資料夾到 public 中以供網頁讀取
+    import shutil
+    if os.path.exists('assets'):
+        shutil.copytree('assets', os.path.join('public', 'assets'), dirs_exist_ok=True)
+    
     # 讀取 base.html 模板
     template_path = os.path.join('templates', 'base.html')
     if not os.path.exists(template_path):
