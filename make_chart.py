@@ -1,3 +1,6 @@
+import matplotlib
+# 在 Linux 無 GUI 環境（例如 GitHub Actions 運作的 Ubuntu 容器）必須使用 'Agg' 後端，否則會報錯
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import os
